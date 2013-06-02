@@ -1,0 +1,10 @@
+var arrTagValue = new Array();
+var arrTagX = new Array();
+var arrTagY = new Array();
+var arrTagSize = new Array();
+var arrTagLock = new Array();
+var totalTags = 0;
+var newscripthead=document.createElement("script");
+newscripthead.type="text/javascript";
+newscripthead.src=imagetag;
+document.getElementsByTagName("head")[0].appendChild(newscripthead);
