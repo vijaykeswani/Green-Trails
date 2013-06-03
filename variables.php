@@ -1,6 +1,6 @@
 <?php
 $DBUSER="root";
-$DBPASS="";
+$DBPASS="windigo";
 $DBNAME="green_trail";
 
 ?>
