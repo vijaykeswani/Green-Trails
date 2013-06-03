@@ -8,16 +8,16 @@ require_once('functions.inc.php');
 //	$username = $mysqli->real_escape_string($_SESSION['username']);
 //	}
 
-/*
+
 if(!isset($_SESSION['username']))
         echo "<META http-equiv='refresh' content='0; URL=facebook/examples/example.php'>";
 else $username=$_SESSION['username'];
-*/
+/*
 $_SESSION['username']="vijay.keswani.35";
 $_SESSION['name']="Vijay Keswani";
 $_SESSION['email']="vijay@dvs.com";
 $username=$_SESSION['username'];
-
+*/
 function randomArrayVar($array)
 {
 if (!is_array($array)){
@@ -202,12 +202,10 @@ $infolink = "http://wikipedia.org/wiki/Special:Search?search=" . str_replace(" "
 
 $latlang=$_GET['q'];
 $pieces=explode(",",$latlang);
-echo "hi";
-print_r($_GET);
-echo "rr";
+
 $_SESSION['lat']=$pieces[0];
 $_SESSION['long']=$pieces[1];
-echo "<script>alert('".$_SESSION['lat']."')</script>";
+//echo "<script>alert('".$_SESSION['lat']."')</script>";
 
 ?>
 
@@ -215,7 +213,7 @@ echo "<script>alert('".$_SESSION['lat']."')</script>";
 <label class="control-label" for="category">Select category</label>
 <div class="controls">
 <select id="category" name="category">
-<option value="people">People</option><option value="wild-life">Wild Life</option><option value="objects">Objects</option><option value="None">Uncatagorized</option>
+<option value="people">Mountains</option><option value="wild-life">Rivers</option><option value="objects">Personal</option><option value="None">Uncatagorized</option>
 
 </select>
 

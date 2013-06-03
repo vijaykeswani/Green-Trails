@@ -1,8 +1,27 @@
 <?php 
+session_start();
+require_once('config.inc.php');
+require_once('functions.inc.php');
+require_once('establish_db_user_connection.php');
+
+//if($connection==1){
+//      $username = $mysqli->real_escape_string($_SESSION['username']);
+//      }
+
+
+if(!isset($_SESSION['username']))
+        echo "<META http-equiv='refresh' content='0; URL=facebook/examples/example.php'>";
+else {$username=$_SESSION['username'];
+$emailaddrs=$_SESSION['email'];
+
+
+
+
+
 $api_key="4dc4ed74f5296f4cf295e6080d4ce4eb";
 //$userid="85714260%40N02";
 $title="indiahikes";
-$email=urlencode("tvanicraath@rocketmail.com");
+$email=urlencode($emailaddrs);
 
 $yql_query_url="http://api.flickr.com/services/rest/?method=flickr.people.findByEmail&api_key=$api_key&find_email=$email&format=rest";
 $xml = simplexml_load_file($yql_query_url);
@@ -149,9 +168,9 @@ $userid=($xml->user['id'][0]);
 
 <h1>
 <?php
-if($_GET['stage']==1) echo "before";
-else if ($_GET['stage']==2) echo "during";
-else echo "after";
+if($_GET['stage']==1) echo "Upload the photograph before cleaning.";
+else if ($_GET['stage']==2) echo "Upload the photogrpah of you cleaning.";
+else echo "Upload the photograph of you disposing the waste in base camp/town";
 ?>
 </h1>
 

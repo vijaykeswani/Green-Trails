@@ -8,15 +8,11 @@ require_once('functions.inc.php');
 //	$username = $mysqli->real_escape_string($_SESSION['username']);
 //	}
 
-/*
+
 if(!isset($_SESSION['username']))
         echo "<META http-equiv='refresh' content='0; URL=facebook/examples/example.php'>";
 else $username=$_SESSION['username'];
-*/
-$_SESSION['username']="vijay.keswani.35";
-$_SESSION['name']="Vijay Keswani";
-$_SESSION['email']="vijay@dvs.com";
-$username=$_SESSION['username'];
+
 ?>
 
 
@@ -662,7 +658,7 @@ h1 {
 </head>
 
 <body onload="init()" style="background-color: rgb(15, 135, 144);">
-<h1>Select the location of your photograph</h1>
+<h1 style="background-color: red">Select the location of your photograph</h1>
 <div id="inputForm">
   <div id="instructions">Enter the location or click the map</div>
   <div>
@@ -671,16 +667,24 @@ h1 {
 
     <input type="text" size="60" id="query"/>
     <input type="button" value="Geocode" onclick="submitQuery()"/>
-	<button onclick="myFunction()">Select Location</button>
-
+	<button onclick="myFunction()">Use Flickr</button>
+	<button onclick="myFunction1()">Upload or Paste URL</button>
 <script>
 function myFunction()	{
+var url=document.getElementById("query").value;
+url=url.slice(1);
+url=url.slice(0,-1);
+var url2="addfromflicker.php?stage=1&q="+url;
+window.location=url2;
+}
+function myFunction1()   {
 var url=document.getElementById("query").value;
 url=url.slice(1);
 url=url.slice(0,-1);
 var url2="uploadstep1.php?q="+url+"#upload";
 window.location=url2;
 }
+
 </script>
 
   </div>

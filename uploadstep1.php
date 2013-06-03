@@ -205,7 +205,7 @@ $pieces=explode(",",$latlang);
 
 $_SESSION['lat']=$pieces[0];
 $_SESSION['long']=$pieces[1];
-echo "<script>alert('".$_SESSION['lat']."')</script>";
+//echo "<script>alert('".$_SESSION['lat']."')</script>";
 
 ?>
 

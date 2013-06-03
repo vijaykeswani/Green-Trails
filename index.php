@@ -159,7 +159,7 @@ $infolink = "http://wikipedia.org/wiki/Special:Search?search=" . str_replace(" "
       <p class="lead">
 	<?php echo "<img src='http://graph.facebook.com/$username/picture'/>" ?>
 	<?php echo (randomArrayVar($greeting));?>
-	<?php echo $_SESSION['name']?></p>
+	<?php echo ", ".$_SESSION['name']?></p>
     </div>
     <div class="span4 offset2">
       <div class="well" style="padding: 15px 15px 0 15px;">
@@ -255,7 +255,7 @@ $infolink = "http://wikipedia.org/wiki/Special:Search?search=" . str_replace(" "
 
 <section id="myuploads">
 
-<h1>Your Uploads></h1>
+<h1>Your Uploads</h1>
 
 <div id="container" class="clearfix">
 
@@ -273,6 +273,7 @@ $infolink = "http://wikipedia.org/wiki/Special:Search?search=" . str_replace(" "
  </script>
 </section>
 <!-- new -oad New ==============================-->
+<!--
 <section id="upload">
 <div class="page-header">
 <h1>Uploads</h1>
@@ -329,7 +330,7 @@ $infolink = "http://wikipedia.org/wiki/Special:Search?search=" . str_replace(" "
 </div>
 
 </section>
-
+-->
 <!-- My Uploads ============================== -->
 <section id="video-upload">
   <div class="page-header">

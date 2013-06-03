@@ -73,7 +73,12 @@ require_once('../establish_db_user_connection.php');
                                 echo  '<li data-id="'.$id.'" class="'.$row_class['class'].'"><br><img src="'.$src.'" alt="Photo" height="128" width="128"><br>';
 //                                      <a href="#" title="'.$userid.'"><img src="../upload/'.$picid.'" alt="Stanley" width="200"/></a>
 //                               </div>';
-				echo '<strong>'.$row_class['class'].'</strong><span style="display:none">__other_vale=ue</span></li>';
+				if($row_class['class']=="people")
+					$cls="Mountain";
+				else if($row_class['class']=="wildlife")
+                                        $cls="Rivers";
+				echo '<strong>'.$cls.'</strong><span style="display:none">__other_vale=ue</span></li>';
+				
 				$id=$id+1;
 
                         }

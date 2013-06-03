@@ -1,7 +1,7 @@
 <?php
 $stage=$_GET['stage'];
 $url=$_GET['q'];
-
+//$url="http://images3.wikia.nocookie.net/__cb20121206160461/powerlisting/images/6/6d/Supermassive_black_hole.jpeg";
 echo $url;
 
 //stage->new_category

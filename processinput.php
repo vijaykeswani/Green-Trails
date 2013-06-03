@@ -161,10 +161,11 @@ $extension = $here[$num];
         $class = $mysqli->real_escape_string($category);
         $sql = "INSERT INTO pics (`picid`, `ownerid`, `time`, `class`, `local`, `lat`, `long`) VALUES ('". $picid ."', '". $userid ."', '". $time ."', '". $class ."', '".$local."', '".$_SESSION['lat']."', '".$_SESSION['long']."' ) ";
 	if($result = $mysqli->query($sql)) {
-		//echo "success";
-				if($_POST['new_category']=='1') header('Location: uploadstep2.php#upload');
-		else if($_POST['new_category']=='2') header('Location: uploadstep3.php#upload');
-		else header('Location: index.php');
+		echo "success";
+		echo $sql;
+//				if($_POST['new_category']=='1') header('Location: uploadstep2.php#upload');
+//		else if($_POST['new_category']=='2') header('Location: uploadstep3.php#upload');
+//		else header('Location: index.php');
 	}
 	else echo "failed! pls try again";
 }
